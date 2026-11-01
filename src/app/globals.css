@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-deep: #0F382C;
+  --color-emerald-light: #165342;
+  --color-cerulean-coastal: #1B4965;
+  --color-cerulean-light: #2B6E96;
+  --color-sunset-ochre: #E76F51;
+  --color-sunset-glow: #F4A261;
+  --color-soft-sand: #E9ECEF;
+  --color-sand-warm: #F4F1DE;
+  --color-off-white: #F8F9FA;
+  --color-slate-charcoal: #1A1A1A;
+  --color-slate-muted: #555B6E;
+
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #F8F9FA;
+  --foreground: #1A1A1A;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 56, 44, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(233, 236, 239, 0.9);
+}
+
+/* Custom elevations */
+.shadow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(15, 56, 44, 0.06);
+}
+
+.shadow-elevation {
+  box-shadow: 0 12px 32px -4px rgba(15, 56, 44, 0.12);
+}
+
+.shadow-hover {
+  box-shadow: 0 20px 40px -6px rgba(15, 56, 44, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* WCAG AAA Accessible Focus Outline */
+*:focus-visible {
+  outline: 2px solid #E76F51;
+  outline-offset: 2px;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
